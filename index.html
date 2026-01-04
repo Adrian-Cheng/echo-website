@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO - Immersive Language Learning</title>
+    <meta name="description" content="ECHO - Learn Japanese, Korean, English through video immersion. AI-powered shadowing, smart subtitles, learning reports.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="assets/images/logo.png" alt="ECHO Logo" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav.features">Features</a>
+                <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                <a href="#download" data-i18n="nav.download">Download</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="currentLang">EN</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('zh')">中文</button>
+                    <button onclick="setLanguage('ja')">日本語</button>
+                    <button onclick="setLanguage('ko')">한국어</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero.badge">🎯 Immersive Language Learning</div>
+            <h1 data-i18n="hero.title">Learn Languages<br><span class="gradient-text" data-i18n="hero.titleHighlight">Naturally & Efficiently</span></h1>
+            <p class="hero-desc" data-i18n="hero.desc">ECHO helps you learn Japanese, Korean, and English through real video content. AI-powered pronunciation scoring, smart subtitles, and personalized learning reports.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <span data-i18n="hero.download">Start Your Echo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#features" class="btn btn-secondary" data-i18n="hero.learnMore">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <img id="hero-image" src="assets/images/ee.jpg" alt="App Preview" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="concept">
+        <div class="concept-content">
+            <p data-i18n="concept.p1">Imagine this:</p>
+            <p data-i18n="concept.p2">You gently shadow a line from your favorite show, TED Talk, or podcast.</p>
+            <p data-i18n="concept.p3">The App immediately gives you an echo—"Pronunciation is spot on! Soften your intonation a bit~"</p>
+            <p data-i18n="concept.p4">Your voice is like a stone thrown into a lake, creating clear ripples,</p>
+            <p data-i18n="concept.p5">Becoming louder, becoming more confident.</p>
+        </div>
+    </section>
+
+    <!-- 功能展示 -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="features.badge">CORE FEATURES</span>
+            <h2 data-i18n="features.title">Make Language Learning <span class="gradient-text" data-i18n="features.titleHighlight">More Effective</span></h2>
+            <p data-i18n="features.desc">ECHO provides comprehensive tools to help you rapidly improve your language skills</p>
+        </div>
+
+        <div class="features-grid">
+            <!-- 1. Import -->
+            <div class="feature-card">
+                <div class="feature-icon">📂</div>
+                <h3 data-i18n="features.f1.title">Import Anything</h3>
+                <p data-i18n="features.f1.desc">Import any video/audio, shadow sentence by sentence.</p>
+            </div>
+
+            <!-- 2. AI Feedback -->
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3 data-i18n="features.f2.title">AI Feedback</h3>
+                <p data-i18n="features.f2.desc">Local AI instant scoring + detailed feedback (pronunciation, speed, intonation, fluency).</p>
+            </div>
+
+            <!-- 3. Dictionary -->
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3 data-i18n="features.f3.title">Offline Dictionary</h3>
+                <p data-i18n="features.f3.desc">Offline multi-language dictionary (Zh-En, Ja-En, Ko-En), tap to look up + pronounce.</p>
+            </div>
+
+            <!-- 4. Scientific Method -->
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3 data-i18n="features.f4.title">Scientific Method</h3>
+                <p data-i18n="features.f4.desc">100LS scientific method + weekly professional reports, see your daily progress.</p>
+            </div>
+
+            <!-- 5. Privacy -->
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 data-i18n="features.f5.title">100% Privacy</h3>
+                <p data-i18n="features.f5.desc">100% Local processing: Subway, plane, no internet? No problem. Absolute privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP 截图展示 - HTML 实现 -->
+    <section id="screenshots" class="screenshots-section">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="screenshots.badge">APP PREVIEW</span>
+            <h2 data-i18n="screenshots.title">Beautifully Designed <span class="gradient-text" data-i18n="screenshots.titleHighlight">User Experience</span></h2>
+        </div>
+        
+        <div class="app-showcase">
+            <!-- 1. Immersive Mode (Landscape) -->
+            <div class="app-screen-wrapper landscape-wrapper span-2">
+                <div class="app-screen landscape">
+                    <img src="assets/images/chenjin.jpg" alt="Immersive Mode" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.immersive">Immersive Mode</span>
+            </div>
+
+            <!-- 2. Landscape Mode (Landscape) -->
+            <div class="app-screen-wrapper landscape-wrapper span-2">
+                <div class="app-screen landscape">
+                    <img src="assets/images/hengping.jpg" alt="Landscape" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.landscape">Landscape Mode</span>
+            </div>
+
+            <!-- 3. Analysis -->
+            <div class="app-screen-wrapper">
+                <div class="app-screen">
+                    <img src="assets/images/fenxi.jpg" alt="Analysis" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.analysis">Analysis</span>
+            </div>
+
+            <!-- 4. Scoring -->
+            <div class="app-screen-wrapper">
+                <div class="app-screen">
+                    <img src="assets/images/gendupingfen.jpg" alt="Scoring" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.scoring">Scoring</span>
+            </div>
+
+            <!-- 5. Report -->
+            <div class="app-screen-wrapper">
+                <div class="app-screen">
+                    <img src="assets/images/study_report.jpg" alt="Report" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.report">Learning Report</span>
+            </div>
+
+            <!-- 6. Loop Mode -->
+            <div class="app-screen-wrapper">
+                <div class="app-screen">
+                    <img src="assets/images/xunhuanmoshi.jpg" alt="Loop Mode" class="screen-image">
+                </div>
+                <span class="screen-label" data-i18n="screenshots.loop">Loop Mode</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 致用户信 -->
+    <section class="letter-section">
+        <div class="letter-container">
+            <div class="letter-header">
+                <span class="letter-icon">💌</span>
+                <h2 data-i18n="letter.title">A Letter to ECHO Users</h2>
+            </div>
+            <div class="letter-content">
+                <p data-i18n="letter.greeting">Dear ECHO Users,</p>
+                <p data-i18n="letter.intro">I am the developer of ECHO, an independent solo developer.</p>
+                <p data-i18n="letter.importance">In today's world, the importance of English is self-evident. It's like a key that opens doors to a broader world. Through English, we can access international news, enjoy original films and shows, learn cutting-edge global knowledge, and communicate with people from different cultural backgrounds. Life is short, and we hope that by mastering English, we can broaden our horizons and embrace more possibilities.</p>
+                <p data-i18n="letter.mission">The original intention of developing ECHO is to provide everyone with a convenient and efficient oral practice tool. Users can import their favorite videos, audio, or movies into the App for sentence-by-sentence shadowing, recording, AI scoring, word lookup, and personal vocabulary building. All features support fully offline use—practice anytime without internet.</p>
+                <p data-i18n="letter.status">Currently, the Android version is available for download, and the iOS version is complete but not yet officially listed on the Apple App Store or Google Play Store. The reason is that, as an individual developer, paying for developer account fees, app review costs, and server maintenance presents some temporary difficulties.</p>
+                <p data-i18n="letter.pro">Therefore, in the early stages of the project, we introduced the PRO subscription mechanism. This is not simply about charging money, but rather we hope that through everyone's collective support (similar to crowdfunding), we can help the project get listed as soon as possible, so that more users can conveniently access and use this application.</p>
+                <p data-i18n="letter.promise">I solemnly promise: Once the app is officially listed, the user base expands, and operating costs are covered, I will cancel the subscription mechanism and make ECHO completely free for all users. My development goal has always been to help everyone improve their English speaking ability, not commercial profit.</p>
+                <p data-i18n="letter.support">If you recognize the value of this application and are willing to support it, you're welcome to upgrade to PRO membership. Every bit of your support will help the project better serve more learners.</p>
+                <p data-i18n="letter.thanks">Thank you for your understanding and trust. Let's work together to connect with a broader world through English.</p>
+                <p class="letter-signature" data-i18n="letter.signature">— ECHO Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定价预览 -->
+    <section class="pricing-preview">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="pricing.badge">ECHO PRO</span>
+            <h2 data-i18n="pricing.title">From Daring to Speak <span class="gradient-text" data-i18n="pricing.titleHighlight">To Native Fluency</span></h2>
+            <p data-i18n="pricing.intro" style="max-width: 800px; margin: 20px auto 0;">The free version makes you fall in love with shadowing. Upgrade to ECHO Pro 💎 to unlock unlimited practice + full scoring details + growth reports.</p>
+        </div>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <div class="price-header">
+                    <h3 data-i18n="pricing.monthly.name">PRO Monthly</h3>
+                    <div class="price"><span data-i18n="pricing.monthly.price">$4.99</span><span data-i18n="pricing.monthly.period">/month</span></div>
+                </div>
+                <ul class="price-features">
+                    <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">Unlimited video import</li>
+                </ul>
+                <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.monthly.btn">Subscribe</a>
+            </div>
+
+            <div class="price-card">
+                <div class="price-badge-cyan" data-i18n="pricing.quarterly.badge">Popular</div>
+                <div class="price-header">
+                    <h3 data-i18n="pricing.quarterly.name">PRO Quarterly</h3>
+                    <div class="price"><span data-i18n="pricing.quarterly.price">$12.99</span><span data-i18n="pricing.quarterly.period">/quarter</span></div>
+                </div>
+                <ul class="price-features">
+                    <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">Unlimited video import</li>
+                    <li data-i18n="pricing.pro.f4">Full learning reports</li>
+                </ul>
+                <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.quarterly.btn">Subscribe</a>
+            </div>
+
+            <div class="price-card featured">
+                <div class="price-badge" data-i18n="pricing.yearly.badge">Best Value</div>
+                <div class="price-header">
+                    <h3 data-i18n="pricing.yearly.name">PRO Yearly</h3>
+                    <div class="price"><span data-i18n="pricing.yearly.price">$39.99</span><span data-i18n="pricing.yearly.period">/year</span></div>
+                </div>
+                <ul class="price-features">
+                    <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">Unlimited video import</li>
+                    <li data-i18n="pricing.pro.f4">Full learning reports</li>
+                    <li data-i18n="pricing.pro.f5">Priority support</li>
+                </ul>
+                <a href="pricing.html" class="btn btn-primary" data-i18n="pricing.yearly.btn">Subscribe</a>
+            </div>
+                <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.lifetime.btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="download">
+        <div class="download-content">
+            <h2 data-i18n="download.title">Send Out Your <span class="gradient-text" data-i18n="download.titleHighlight">First Echo</span></h2>
+            <p data-i18n="download.desc">The world is waiting for your response.</p>
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <span class="download-icon">🤖</span>
+                    <div class="download-text">
+                        <span class="small" data-i18n="download.getIt">GET IT ON</span>
+                        <span class="large">Android</span>
+                    </div>
+                </a>
+            </div>
+            <p class="coming-soon" data-i18n="download.iosComingSoon">iOS version coming soon</p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">ECHO</span>
+                <p data-i18n="footer.tagline">Immersive Language Learning</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="#features" data-i18n="nav.features">Features</a>
+                    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                    <a href="#download" data-i18n="nav.download">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <a href="mailto:support@adrian-m.top">support@adrian-m.top</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ECHO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+</body>
+</html>

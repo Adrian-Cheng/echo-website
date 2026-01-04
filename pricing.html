@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - ECHO</title>
+    <meta name="description" content="ECHO PRO Subscription Plans - Unlock unlimited language learning features">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">ECHO</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features" data-i18n="nav.features">Features</a>
+                <a href="pricing.html" class="active" data-i18n="nav.pricing">Pricing</a>
+                <a href="index.html#download" data-i18n="nav.download">Download</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="currentLang">EN</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('zh')">中文</button>
+                    <button onclick="setLanguage('ja')">日本語</button>
+                    <button onclick="setLanguage('ko')">한국어</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 定价区域 -->
+    <section class="pricing-page">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="pricing.badge">PRO MEMBERSHIP</span>
+            <h1><span data-i18n="pricingPage.title">Choose Your</span> <span class="gradient-text" data-i18n="pricingPage.titleHighlight">Learning Plan</span></h1>
+            <p data-i18n="pricingPage.desc">Upgrade to PRO to unlock all ECHO features</p>
+        </div>
+
+        <!-- 功能对比表 -->
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="pricingPage.feature">Feature</th>
+                        <th data-i18n="pricingPage.freeVersion">Free</th>
+                        <th class="highlight" data-i18n="pricingPage.proVersion">PRO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="pricingPage.dailyShadowing">Daily shadowing</td>
+                        <td>5 <span data-i18n="pricingPage.times">times</span></td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.dailyLookup">Daily word lookup</td>
+                        <td>5 <span data-i18n="pricingPage.times">times</span></td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.videoImport">Video import</td>
+                        <td>3</td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.loopPlay">Loop playback</td>
+                        <td>5 <span data-i18n="pricingPage.times">times</span></td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.vocabulary">Vocabulary list</td>
+                        <td>50</td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.recordings">Saved recordings</td>
+                        <td>5</td>
+                        <td class="highlight" data-i18n="pricingPage.unlimited">Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.reports">Learning reports</td>
+                        <td data-i18n="pricingPage.basic">Basic</td>
+                        <td class="highlight" data-i18n="pricingPage.full">Full Reports</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="pricingPage.support">Support</td>
+                        <td data-i18n="pricingPage.standard">Standard</td>
+                        <td class="highlight" data-i18n="pricingPage.priority">Priority</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 订阅计划 - 使用 APP 实际定价 -->
+        <div class="pricing-plans">
+            <div class="plan-card">
+                <h3 data-i18n="pricing.monthly.name">PRO Monthly</h3>
+                <div class="plan-price">
+                    <span class="currency">¥</span>
+                    <span class="amount">18</span>
+                    <span class="period" data-i18n="pricing.monthly.period">/month</span>
+                </div>
+                <p class="plan-desc">Flexible monthly subscription</p>
+                <ul class="plan-features">
+                    <li data-i18n="pricing.pro.f1">✓ Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">✓ Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">✓ Unlimited video import</li>
+                </ul>
+                <a href="index.html#download" class="btn btn-secondary" data-i18n="pricing.monthly.btn">Choose Plan</a>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="plan-badge" data-i18n="pricing.yearly.badge">Best Value</div>
+                <h3 data-i18n="pricing.yearly.name">PRO Yearly</h3>
+                <div class="plan-price">
+                    <span class="currency">¥</span>
+                    <span class="amount">98</span>
+                    <span class="period" data-i18n="pricing.yearly.period">/year</span>
+                </div>
+                <p class="plan-desc">Save 55% vs monthly</p>
+                <ul class="plan-features">
+                    <li data-i18n="pricing.pro.f1">✓ Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">✓ Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">✓ Unlimited video import</li>
+                    <li data-i18n="pricing.pro.f4">✓ Full learning reports</li>
+                    <li data-i18n="pricing.pro.f5">✓ Priority support</li>
+                </ul>
+                <a href="index.html#download" class="btn btn-primary" data-i18n="pricing.yearly.btn">Choose Plan</a>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-badge-gold" data-i18n="pricing.lifetime.badge">Forever</div>
+                <h3 data-i18n="pricing.lifetime.name">PRO Lifetime</h3>
+                <div class="plan-price">
+                    <span class="currency">¥</span>
+                    <span class="amount">198</span>
+                    <span class="period" data-i18n="pricing.lifetime.period">one-time</span>
+                </div>
+                <p class="plan-desc">Pay once, use forever</p>
+                <ul class="plan-features">
+                    <li data-i18n="pricing.pro.f1">✓ Unlimited shadowing</li>
+                    <li data-i18n="pricing.pro.f2">✓ Unlimited word lookup</li>
+                    <li data-i18n="pricing.pro.f3">✓ Unlimited video import</li>
+                    <li data-i18n="pricing.pro.f4">✓ Full learning reports</li>
+                    <li data-i18n="pricing.pro.f5">✓ Priority support</li>
+                    <li>✓ All future updates</li>
+                </ul>
+                <a href="index.html#download" class="btn btn-secondary" data-i18n="pricing.lifetime.btn">Choose Plan</a>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h3 data-i18n="pricingPage.faq">FAQ</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4 data-i18n="pricingPage.faq1q">How to purchase PRO?</h4>
+                    <p data-i18n="pricingPage.faq1a">Download ECHO app, go to Profile → PRO Membership to purchase.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricingPage.faq2q">What payment methods are accepted?</h4>
+                    <p data-i18n="pricingPage.faq2a">We accept credit cards, PayPal internationally.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricingPage.faq3q">Can I get a refund?</h4>
+                    <p data-i18n="pricingPage.faq3a">Yes, we offer a 7-day money-back guarantee. Contact support@adrian-m.top.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricingPage.faq4q">Can I use on multiple devices?</h4>
+                    <p data-i18n="pricingPage.faq4a">Yes, log in with the same account to use PRO on multiple devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">ECHO</span>
+                <p data-i18n="footer.tagline">Immersive Language Learning</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="index.html#features" data-i18n="nav.features">Features</a>
+                    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                    <a href="index.html#download" data-i18n="nav.download">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <a href="mailto:support@adrian-m.top">support@adrian-m.top</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ECHO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <style>
+        /* Pricing Page Specific Styles */
+        .pricing-page {
+            padding: 140px 24px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-table-container {
+            overflow-x: auto;
+            margin-bottom: 60px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 16px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-table th {
+            background: rgba(0,0,0,0.3);
+            font-weight: 600;
+        }
+
+        .pricing-table th.highlight,
+        .pricing-table td.highlight {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .pricing-table td:first-child {
+            text-align: left;
+            color: var(--text-secondary);
+        }
+
+        .pricing-plans {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .plan-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .plan-card.featured {
+            background: linear-gradient(145deg, rgba(155, 109, 255, 0.1), rgba(155, 109, 255, 0.02));
+            border-color: rgba(155, 109, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .plan-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: var(--gradient-purple);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .plan-badge-gold {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: var(--gradient-gold);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--bg-dark);
+        }
+
+        .plan-card h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .plan-price {
+            margin-bottom: 8px;
+        }
+
+        .plan-price .currency {
+            font-size: 24px;
+            vertical-align: top;
+        }
+
+        .plan-price .amount {
+            font-size: 56px;
+            font-weight: 800;
+        }
+
+        .plan-price .period {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .plan-desc {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-section h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .faq-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .faq-item h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-plans {
+                grid-template-columns: 1fr;
+            }
+            
+            .plan-card.featured {
+                transform: none;
+            }
+            
+            .faq-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
