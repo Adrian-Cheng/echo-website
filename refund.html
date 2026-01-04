@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - ECHO</title>
+    <meta name="description" content="ECHO Refund Policy">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">ECHO</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features" data-i18n="nav.features">Features</a>
+                <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                <a href="index.html#download" data-i18n="nav.download">Download</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="currentLang">EN</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('zh')">中文</button>
+                    <button onclick="setLanguage('ja')">日本語</button>
+                    <button onclick="setLanguage('ko')">한국어</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 内容区域 -->
+    <article class="legal-page">
+        <h1>Refund Policy</h1>
+        <p class="last-updated">Last updated: January 2025</p>
+
+        <section>
+            <h2>Legal Entity</h2>
+            <p><strong>ECHO</strong> is a mobile application developed and operated by Adrian Cheng (individual developer), based in Shenyang, Liaoning, China.</p>
+            <p>Business Name: <strong>ECHO</strong></p>
+            <p>Contact Email: support@adrian-m.top</p>
+        </section>
+
+        <section>
+            <h2>1. Overview</h2>
+            <p>At ECHO, we want you to be completely satisfied with your purchase. If you are not satisfied with your PRO subscription, you may request a refund according to the terms outlined below.</p>
+        </section>
+
+        <section>
+            <h2>2. 7-Day Money-Back Guarantee</h2>
+            <p>We offer a <strong>7-day money-back guarantee</strong> for all new PRO subscription purchases:</p>
+            <ul>
+                <li>You may request a full refund within 7 days of your initial purchase, no questions asked.</li>
+                <li>This guarantee applies to first-time PRO subscribers only.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. How to Request a Refund</h2>
+            <p>To request a refund, please:</p>
+            <ul>
+                <li>Email us at <a href="mailto:support@adrian-m.top">support@adrian-m.top</a></li>
+                <li>Include your account email address and purchase date</li>
+                <li>State the reason for your refund request (optional but helpful)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Refund Processing</h2>
+            <ul>
+                <li>Refunds will be processed within <strong>5-10 business days</strong></li>
+                <li>Refunds will be credited to the original payment method</li>
+                <li>You will receive an email confirmation once the refund is processed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. After the 7-Day Period</h2>
+            <p>Refund requests made after the 7-day period will be considered on a case-by-case basis. We may offer:</p>
+            <ul>
+                <li>Partial refunds</li>
+                <li>Account credits</li>
+                <li>Extended trial periods</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Subscription Cancellation</h2>
+            <p>You can cancel your subscription at any time:</p>
+            <ul>
+                <li>Your PRO access will continue until the end of your current billing period</li>
+                <li>No further charges will be made after cancellation</li>
+                <li>Cancellation does not automatically trigger a refund</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions about our refund policy, please contact us:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@adrian-m.top">support@adrian-m.top</a></li>
+            </ul>
+        </section>
+    </article>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-icon">◇</span>
+                <span class="logo-text">ECHO</span>
+                <p data-i18n="footer.tagline">Immersive Language Learning</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <a href="index.html#features" data-i18n="nav.features">Features</a>
+                    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                    <a href="index.html#download" data-i18n="nav.download">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="refund.html">Refund Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <a href="mailto:support@adrian-m.top">support@adrian-m.top</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 ECHO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <style>
+        .legal-page {
+            padding: 140px 24px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-page h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            font-size: 14px;
+        }
+
+        .legal-page section {
+            margin-bottom: 32px;
+        }
+
+        .legal-page h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: var(--primary-cyan);
+        }
+
+        .legal-page p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .legal-page ul {
+            margin-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        .legal-page li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .legal-page a {
+            color: var(--primary-cyan);
+        }
+    </style>
+</body>
+</html>
