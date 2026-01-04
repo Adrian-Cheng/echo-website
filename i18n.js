@@ -128,6 +128,7 @@ const translations = {
         "footer.legal": "Legal",
         "footer.terms": "Terms of Service",
         "footer.privacy": "Privacy Policy",
+        "footer.refund": "Refund Policy",
         "footer.contact": "Contact",
 
         // Pricing Page
@@ -293,6 +294,7 @@ const translations = {
         "footer.legal": "法律",
         "footer.terms": "服务条款",
         "footer.privacy": "隐私政策",
+        "footer.refund": "退款政策",
         "footer.contact": "联系我们",
 
         // Pricing Page
@@ -458,6 +460,7 @@ const translations = {
         "footer.legal": "法的事項",
         "footer.terms": "利用規約",
         "footer.privacy": "プライバシーポリシー",
+        "footer.refund": "返金ポリシー",
         "footer.contact": "お問い合わせ",
 
         // Terms
@@ -592,6 +595,7 @@ const translations = {
         "footer.legal": "법적 사항",
         "footer.terms": "이용약관",
         "footer.privacy": "개인정보 보호정책",
+        "footer.refund": "환불 정책",
         "footer.contact": "연락처",
 
         // Terms
