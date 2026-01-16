@@ -620,6 +620,9 @@ function setLanguage(lang) {
     updateLangDisplay(lang);
     updateHeroImage(lang);
     closeLangMenu();
+
+    // Dispatch event for pricing.js to update prices based on new language
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
 }
 
 // Apply translations to all elements with data-i18n attribute
