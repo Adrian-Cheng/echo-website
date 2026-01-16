@@ -208,10 +208,14 @@
             <p data-i18n="pricing.intro" style="max-width: 800px; margin: 20px auto 0;">The free version makes you fall in love with shadowing. Upgrade to ECHO Pro 💎 to unlock unlimited practice + full scoring details + growth reports.</p>
         </div>
         <div class="pricing-cards">
-            <div class="price-card">
+            <div class="price-card" id="home-monthly-card">
                 <div class="price-header">
                     <h3 data-i18n="pricing.monthly.name">PRO Monthly</h3>
-                    <div class="price"><span data-i18n="pricing.monthly.price">$4.99</span><span data-i18n="pricing.monthly.period">/month</span></div>
+                    <div class="price">
+                        <span class="currency" id="home-monthly-currency">$</span>
+                        <span class="amount" id="home-monthly-amount">4.99</span>
+                        <span data-i18n="pricing.monthly.period">/month</span>
+                    </div>
                 </div>
                 <ul class="price-features">
                     <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
@@ -221,11 +225,15 @@
                 <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.monthly.btn">Subscribe</a>
             </div>
 
-            <div class="price-card">
+            <div class="price-card" id="home-quarterly-card">
                 <div class="price-badge-cyan" data-i18n="pricing.quarterly.badge">Popular</div>
                 <div class="price-header">
                     <h3 data-i18n="pricing.quarterly.name">PRO Quarterly</h3>
-                    <div class="price"><span data-i18n="pricing.quarterly.price">$12.99</span><span data-i18n="pricing.quarterly.period">/quarter</span></div>
+                    <div class="price">
+                        <span class="currency" id="home-quarterly-currency">$</span>
+                        <span class="amount" id="home-quarterly-amount">12.99</span>
+                        <span data-i18n="pricing.quarterly.period">/quarter</span>
+                    </div>
                 </div>
                 <ul class="price-features">
                     <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
@@ -236,11 +244,15 @@
                 <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.quarterly.btn">Subscribe</a>
             </div>
 
-            <div class="price-card featured">
+            <div class="price-card featured" id="home-yearly-card">
                 <div class="price-badge" data-i18n="pricing.yearly.badge">Best Value</div>
                 <div class="price-header">
                     <h3 data-i18n="pricing.yearly.name">PRO Yearly</h3>
-                    <div class="price"><span data-i18n="pricing.yearly.price">$39.99</span><span data-i18n="pricing.yearly.period">/year</span></div>
+                    <div class="price">
+                        <span class="currency" id="home-yearly-currency">$</span>
+                        <span class="amount" id="home-yearly-amount">39.99</span>
+                        <span data-i18n="pricing.yearly.period">/year</span>
+                    </div>
                 </div>
                 <ul class="price-features">
                     <li data-i18n="pricing.pro.f1">Unlimited shadowing</li>
@@ -250,8 +262,6 @@
                     <li data-i18n="pricing.pro.f5">Priority support</li>
                 </ul>
                 <a href="pricing.html" class="btn btn-primary" data-i18n="pricing.yearly.btn">Subscribe</a>
-            </div>
-                <a href="pricing.html" class="btn btn-secondary" data-i18n="pricing.lifetime.btn">View Details</a>
             </div>
         </div>
     </section>

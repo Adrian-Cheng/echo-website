@@ -64,13 +64,12 @@ async function fetchPricesFromSupabase() {
     }
 }
 
-// 格式化价格显示
-function formatPrice(amount, currency) {
-    const symbol = currencySymbols[currency] || '$';
+// 格式化价格金额（不含符号）
+function formatAmount(amount, currency) {
     if (currency === 'jpy' || currency === 'krw') {
-        return `${symbol}${Math.round(amount)}`;
+        return Math.round(amount).toString();
     }
-    return `${symbol}${amount.toFixed(2)}`;
+    return amount.toFixed(2);
 }
 
 // 更新页面上的价格
@@ -78,27 +77,24 @@ function updatePricesOnPage(prices, currency) {
     const currencyPrices = prices[currency] || defaultPrices[currency];
     if (!currencyPrices) return;
 
-    // 更新首页的价格展示 (index.html)
-    const priceElements = {
-        // 月费
-        'pricing.monthly.price': currencyPrices.monthly,
-        // 季费
-        'pricing.quarterly.price': currencyPrices.quarterly,
-        // 年费
-        'pricing.yearly.price': currencyPrices.yearly,
-        // 终身
-        'pricing.lifetime.price': currencyPrices.lifetime
-    };
+    const symbol = currencySymbols[currency] || '$';
 
-    // 遍历并更新带有 data-i18n 的价格元素
-    Object.keys(priceElements).forEach(key => {
-        const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
-        elements.forEach(el => {
-            const amount = priceElements[key];
-            if (amount !== undefined) {
-                el.textContent = formatPrice(amount, currency);
-            }
-        });
+    // 更新首页的价格 (index.html) - 通过 ID
+    const homePageUpdates = [
+        { amountId: 'home-monthly-amount', currencyId: 'home-monthly-currency', plan: 'monthly' },
+        { amountId: 'home-quarterly-amount', currencyId: 'home-quarterly-currency', plan: 'quarterly' },
+        { amountId: 'home-yearly-amount', currencyId: 'home-yearly-currency', plan: 'yearly' }
+    ];
+
+    homePageUpdates.forEach(({ amountId, currencyId, plan }) => {
+        const amountEl = document.getElementById(amountId);
+        const currencyEl = document.getElementById(currencyId);
+        if (amountEl && currencyPrices[plan] !== undefined) {
+            amountEl.textContent = formatAmount(currencyPrices[plan], currency);
+        }
+        if (currencyEl) {
+            currencyEl.textContent = symbol;
+        }
     });
 
     // 更新 pricing.html 页面的价格
@@ -109,7 +105,7 @@ function updatePricesOnPage(prices, currency) {
 function updatePricingPagePrices(prices, currency) {
     const symbol = currencySymbols[currency] || '$';
 
-    // 更新价格卡片中的金额
+    // 更新价格卡片中的金额 (.plan-card 是 pricing.html 使用的类)
     const planCards = document.querySelectorAll('.plan-card');
     planCards.forEach(card => {
         const planName = card.querySelector('h3');
@@ -121,24 +117,20 @@ function updatePricingPagePrices(prices, currency) {
         if (!amountEl) return;
 
         let planType = '';
-        if (planName.textContent.toLowerCase().includes('month') ||
-            planName.getAttribute('data-i18n')?.includes('monthly')) {
+        const i18nKey = planName.getAttribute('data-i18n') || '';
+
+        if (i18nKey.includes('monthly')) {
             planType = 'monthly';
-        } else if (planName.textContent.toLowerCase().includes('year') ||
-            planName.getAttribute('data-i18n')?.includes('yearly')) {
+        } else if (i18nKey.includes('quarterly')) {
+            planType = 'quarterly';
+        } else if (i18nKey.includes('yearly')) {
             planType = 'yearly';
-        } else if (planName.textContent.toLowerCase().includes('lifetime') ||
-            planName.getAttribute('data-i18n')?.includes('lifetime')) {
+        } else if (i18nKey.includes('lifetime')) {
             planType = 'lifetime';
         }
 
         if (planType && prices[planType] !== undefined) {
-            const amount = prices[planType];
-            if (currency === 'jpy' || currency === 'krw') {
-                amountEl.textContent = Math.round(amount);
-            } else {
-                amountEl.textContent = amount.toFixed(2);
-            }
+            amountEl.textContent = formatAmount(prices[planType], currency);
             if (currencyEl) {
                 currencyEl.textContent = symbol;
             }
