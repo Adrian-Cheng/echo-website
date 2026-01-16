@@ -608,9 +608,22 @@ const translations = {
     }
 };
 
-// Get current language from localStorage or default to 'en'
+// Get current language from localStorage or browser settings
 function getCurrentLanguage() {
-    return localStorage.getItem('echoLang') || 'en';
+    // 1. Check localStorage
+    const savedLang = localStorage.getItem('echoLang');
+    if (savedLang) return savedLang;
+
+    // 2. Check browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (browserLang) {
+        if (browserLang.startsWith('zh')) return 'zh';
+        if (browserLang.startsWith('ja')) return 'ja';
+        if (browserLang.startsWith('ko')) return 'ko';
+    }
+
+    // 3. Default to English
+    return 'en';
 }
 
 // Set language
