@@ -1,6 +1,6 @@
 // Supabase 配置 (使用 anon key，安全地暴露在前端)
 const SUPABASE_URL = 'https://veiwysofwfwxnbkpgckq.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlaXd5c29md2Z3eG5ia3BnY2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNDQyMDEsImV4cCI6MjA4MjkyMDIwMX0.FqC6fJ9oOgHJqH9JCz2O4yzUpF0xLI1fCj_l12N1vJA';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlaXd5c29md2Z3eG5ia3BnY2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNDQyMDEsImV4cCI6MjA4MjkyMDIwMX0.oZYT44zNe3EHqkUlIHppq92I4xUYvWgaXCnKGU3xUQ0';
 
 // 默认价格（备用）
 const defaultPrices = {
