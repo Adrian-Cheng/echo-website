@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refund Policy - ECHO</title>
-    <meta name="description" content="ECHO Refund Policy">
+    <title>About Us - ECHO</title>
+    <meta name="description" content="About ECHO and its developer">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
             <div class="nav-links">
                 <a href="index.html#features" data-i18n="nav.features">Features</a>
                 <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
-                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="about.html" class="active" data-i18n="nav.about">About</a>
                 <a href="index.html#download" data-i18n="nav.download">Download</a>
             </div>
             <div class="lang-switcher">
@@ -40,32 +40,26 @@
 
     <!-- 内容区域 -->
     <article class="legal-page">
-        <h1 data-i18n="refund.title">Refund Policy</h1>
-        <p class="last-updated" data-i18n="refund.updated">Last updated: January 2025</p>
-
+        <h1 data-i18n="about.title">About ECHO</h1>
+        
         <section>
-            <h2 data-i18n="refund.guarantee.title">7-Day Money-Back Guarantee</h2>
-            <p data-i18n="refund.guarantee.desc">We offer a <strong>7-day money-back guarantee</strong> for all PRO subscriptions. If you are not satisfied with your purchase, you may request a full refund within 7 days of the purchase date.</p>
+            <h2 data-i18n="about.who.title">Who I Am</h2>
+            <p data-i18n="about.who.desc">ECHO is an independent project built and maintained by an individual developer. I am passionate about language learning and technology, and I created this tool to solve my own problems in practicing speaking.</p>
         </section>
 
         <section>
-            <h2 data-i18n="refund.how.title">How to Request a Refund</h2>
-            <p data-i18n="refund.how.desc">To request a refund, please email us at <a href="mailto:support@adrian-m.top">support@adrian-m.top</a> with your purchase details (email used for account). We will process your request within 24-48 hours.</p>
+            <h2 data-i18n="about.why.title">Why I Built It</h2>
+            <p data-i18n="about.why.desc">I built this app to help learners practice English more effectively with their own materials. Traditional methods often lack immediate feedback, and I wanted to create a "private coach" that is always available.</p>
         </section>
 
         <section>
-            <h2 data-i18n="refund.content.title">Content Policy Disclaimer</h2>
-            <p data-i18n="refund.content.desc"><strong>ECHO does not provide or distribute any movies, TV shows, or copyrighted media content.</strong> Users must use their own legally obtained materials for learning purposes. The app is a tool for practicing languages using your own content.</p>
+            <h2 data-i18n="about.commitment.title">My Commitment</h2>
+            <p data-i18n="about.commitment.desc">I actively maintain the app and respond to user feedback. While I am a solo developer, I am dedicated to providing a stable, high-quality experience for all users.</p>
         </section>
 
         <section>
-            <h2 data-i18n="refund.cancel.title">Subscription Cancellation</h2>
-            <p data-i18n="refund.cancel.desc">You can cancel your subscription at any time through the app settings or by contacting us. Your PRO access will continue until the end of your current billing period.</p>
-        </section>
-
-        <section>
-            <h2 data-i18n="refund.contact.title">Contact Us</h2>
-            <p data-i18n="refund.contact.desc">If you have any questions about our refund policy, please contact us at:</p>
+            <h2 data-i18n="about.contact.title">Contact Me</h2>
+            <p data-i18n="about.contact.desc">If you have any questions, suggestions, or just want to say hi, please feel free to reach out.</p>
             <p>Email: <a href="mailto:support@adrian-m.top">support@adrian-m.top</a></p>
         </section>
     </article>
@@ -115,24 +109,18 @@
 
         .legal-page h1 {
             font-size: 36px;
-            margin-bottom: 8px;
+            margin-bottom: 48px;
             background: linear-gradient(135deg, #000 0%, #666 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .last-updated {
-            color: var(--text-muted);
-            margin-bottom: 48px;
-            font-size: 14px;
-        }
-
         .legal-page section {
-            margin-bottom: 32px;
+            margin-bottom: 48px;
         }
 
         .legal-page h2 {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 16px;
             color: var(--primary-cyan);
         }
@@ -141,6 +129,7 @@
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 12px;
+            font-size: 16px;
         }
 
         .legal-page a {

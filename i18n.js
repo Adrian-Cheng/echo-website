@@ -5,13 +5,14 @@ const translations = {
         // Navigation
         "nav.features": "Features",
         "nav.pricing": "Pricing",
+        "nav.about": "About",
         "nav.download": "Download",
 
         // Hero
         "hero.badge": "ECHO",
         "hero.title": "Every Shadow is a",
         "hero.titleHighlight": "Conversation with the World",
-        "hero.desc": "Your private echo coach for mastering languages.",
+        "hero.desc": "The AI Shadowing Coach that turns your favorite videos into language lessons. Import any content, practice speaking, and get instant feedback.",
         "hero.download": "Start Your Echo",
         "hero.learnMore": "Learn More",
 
@@ -168,20 +169,49 @@ const translations = {
 
         // Privacy
         "privacy.title": "Privacy Policy",
-        "privacy.updated": "Last updated: January 2025"
+        "privacy.updated": "Last updated: January 2025",
+
+        "footer.about": "About",
+        "footer.developer": "Operated by an independent developer.",
+
+        // About Page
+        "about.title": "About ECHO",
+        "about.who.title": "Who I Am",
+        "about.who.desc": "ECHO is an independent project built and maintained by an individual developer. I am passionate about language learning and technology, and I created this tool to solve my own problems in practicing speaking.",
+        "about.why.title": "Why I Built It",
+        "about.why.desc": "I built this app to help learners practice English more effectively with their own materials. Traditional methods often lack immediate feedback, and I wanted to create a \"private coach\" that is always available.",
+        "about.commitment.title": "My Commitment",
+        "about.commitment.desc": "I actively maintain the app and respond to user feedback. While I am a solo developer, I am dedicated to providing a stable, high-quality experience for all users.",
+        "about.contact.title": "Contact Me",
+        "about.contact.desc": "If you have any questions, suggestions, or just want to say hi, please feel free to reach out.",
+
+        // Refund Page
+        "refund.title": "Refund Policy",
+        "refund.updated": "Last updated: January 2025",
+        "refund.guarantee.title": "7-Day Money-Back Guarantee",
+        "refund.guarantee.desc": "We offer a 7-day money-back guarantee for all PRO subscriptions. If you are not satisfied with your purchase, you may request a full refund within 7 days of the purchase date.",
+        "refund.how.title": "How to Request a Refund",
+        "refund.how.desc": "To request a refund, please email us at <a href=\"mailto:support@adrian-m.top\">support@adrian-m.top</a> with your purchase details (email used for account). We will process your request within 24-48 hours.",
+        "refund.content.title": "Content Policy Disclaimer",
+        "refund.content.desc": "<strong>ECHO does not provide or distribute any movies, TV shows, or copyrighted media content.</strong> Users must use their own legally obtained materials for learning purposes. The app is a tool for practicing languages using your own content.",
+        "refund.cancel.title": "Subscription Cancellation",
+        "refund.cancel.desc": "You can cancel your subscription at any time through the app settings or by contacting us. Your PRO access will continue until the end of your current billing period.",
+        "refund.contact.title": "Contact Us",
+        "refund.contact.desc": "If you have any questions about our refund policy, please contact us at:"
     },
 
     zh: {
         // Navigation
         "nav.features": "功能",
         "nav.pricing": "定价",
+        "nav.about": "关于",
         "nav.download": "下载",
 
         // Hero
         "hero.badge": "ECHO",
         "hero.title": "每一句跟读",
         "hero.titleHighlight": "都是在和世界对话",
-        "hero.desc": "ECHO 就是你的私人回声教练。",
+        "hero.desc": "能把任何视频变成口语课的 AI 跟读教练。导入你喜欢的素材，逐句跟读，获取即时发音反馈。",
         "hero.download": "发出你的第一句回声",
         "hero.learnMore": "了解更多",
 
@@ -334,20 +364,49 @@ const translations = {
 
         // Privacy
         "privacy.title": "隐私政策",
-        "privacy.updated": "最后更新：2025 年 1 月"
+        "privacy.updated": "最后更新：2025 年 1 月",
+
+        "footer.about": "关于我们",
+        "footer.developer": "由独立开发者运营",
+
+        // About Page
+        "about.title": "关于 ECHO",
+        "about.who.title": "我是谁",
+        "about.who.desc": "ECHO 是一个由个人开发者构建和维护的独立项目。我热衷于语言学习和技术，开发这个工具是为了解决我自己练习口语时的痛点。",
+        "about.why.title": "为什么开发它",
+        "about.why.desc": "我开发这个应用是为了帮助学习者利用自己的材料更有效地练习英语。传统方法往往缺乏即时反馈，我想创造一个随时待命的“私人教练”。",
+        "about.commitment.title": "我的承诺",
+        "about.commitment.desc": "我会积极维护应用并回应用户反馈。虽然我是独立开发者，但我致力于为所有用户提供稳定、高质量的使用体验。",
+        "about.contact.title": "联系我",
+        "about.contact.desc": "如果您有任何问题、建议，或者只是想打个招呼，欢迎随时联系。",
+
+        // Refund Page
+        "refund.title": "退款政策",
+        "refund.updated": "最后更新：2025年1月",
+        "refund.guarantee.title": "7天无理由退款保证",
+        "refund.guarantee.desc": "我们为所有 PRO 订阅提供 7 天无理由退款保证。如果您对购买不满意，可以在购买之日起 7 天内申请全额退款。",
+        "refund.how.title": "如何申请退款",
+        "refund.how.desc": "如需申请退款，请发送邮件至 <a href=\"mailto:support@adrian-m.top\">support@adrian-m.top</a> 并提供您的购买详情（账号邮箱）。我们将在 24-48 小时内处理您的请求。",
+        "refund.content.title": "内容政策免责声明",
+        "refund.content.desc": "<strong>ECHO 不提供或分发任何电影、电视剧或受版权保护的媒体内容。</strong> 用户必须使用自己合法获取的材料进行学习。本应用仅作为使用您自有内容进行语言练习的工具。",
+        "refund.cancel.title": "取消订阅",
+        "refund.cancel.desc": "您可以随时通过应用设置或联系我们取消订阅。您的 PRO 权益将持续到当前计费周期结束。",
+        "refund.contact.title": "联系我们",
+        "refund.contact.desc": "如果您对我们的退款政策有任何疑问，请联系我们："
     },
 
     ja: {
         // Navigation
         "nav.features": "機能",
         "nav.pricing": "料金",
+        "nav.about": "ECHOとは",
         "nav.download": "ダウンロード",
 
         // Hero
         "hero.badge": "ECHO",
         "hero.title": "すべてのシャドーイングは",
         "hero.titleHighlight": "世界との対話です",
-        "hero.desc": "ECHOはあなたのプライベート・エコーコーチ。",
+        "hero.desc": "お気に入りの動画を語学レッスンに変えるAIシャドーイングコーチ。好きなコンテンツをインポートして、発音を練習し、即座にフィードバックを受け取れます。",
         "hero.download": "最初のエコーを響かせる",
         "hero.learnMore": "詳細を見る",
 
@@ -469,20 +528,49 @@ const translations = {
 
         // Privacy
         "privacy.title": "プライバシーポリシー",
-        "privacy.updated": "最終更新日：2025年1月"
+        "privacy.updated": "最終更新日：2025年1月",
+
+        "footer.about": "ECHOについて",
+        "footer.developer": "個人開発者によって運営されています",
+
+        // About Page
+        "about.title": "ECHOについて",
+        "about.who.title": "開発者について",
+        "about.who.desc": "ECHOは、個人開発者が構築・運営する独立したプロジェクトです。言語学習とテクノロジーに情熱を持っており、私自身のスピーキング練習の課題を解決するためにこのツールを作りました。",
+        "about.why.title": "開発の理由",
+        "about.why.desc": "学習者が自分の教材を使ってより効果的に英語を練習できるようにするために、このアプリを開発しました。従来の方法では即時のフィードバックが不足しがちですが、いつでも利用できる「プライベートコーチ」を作りたいと考えました。",
+        "about.commitment.title": "私の約束",
+        "about.commitment.desc": "アプリを積極的にメンテナンスし、ユーザーのフィードバックに対応します。個人開発者ではありますが、すべてのユーザーに安定的で高品質な体験を提供することに尽力しています。",
+        "about.contact.title": "お問い合わせ",
+        "about.contact.desc": "ご質問、ご提案、または単なるご挨拶でも、お気軽にご連絡ください。",
+
+        // Refund Page
+        "refund.title": "返金ポリシー",
+        "refund.updated": "最終更新日：2025年1月",
+        "refund.guarantee.title": "7日間返金保証",
+        "refund.guarantee.desc": "すべてのPROサブスクリプションに対して、7日間の返金保証を提供しています。購入にご満足いただけない場合は、購入日から7日以内であれば全額返金を請求できます。",
+        "refund.how.title": "返金の申請方法",
+        "refund.how.desc": "返金を申請するには、購入詳細（アカウントのメールアドレス）を添えて <a href=\"mailto:support@adrian-m.top\">support@adrian-m.top</a> までメールをお送りください。24〜48時間以内にリクエストを処理いたします。",
+        "refund.content.title": "コンテンツに関する免責事項",
+        "refund.content.desc": "<strong>ECHOは、映画、テレビ番組、または著作権で保護されたメディアコンテンツを提供または配布しません。</strong> ユーザーは、学習目的のために合法的に入手した独自の教材を使用する必要があります。このアプリは、独自のコンテンツを使用して言語を練習するためのツールです。",
+        "refund.cancel.title": "サブスクリプションのキャンセル",
+        "refund.cancel.desc": "アプリの設定から、またはお問い合わせいただくことで、いつでもサブスクリプションをキャンセルできます。PROのアクセス権は、現在の請求期間が終了するまで継続します。",
+        "refund.contact.title": "お問い合わせ",
+        "refund.contact.desc": "返金ポリシーについてご質問がある場合は、以下までお問い合わせください："
     },
 
     ko: {
         // Navigation
         "nav.features": "기능",
         "nav.pricing": "가격",
+        "nav.about": "소개",
         "nav.download": "다운로드",
 
         // Hero
         "hero.badge": "ECHO",
         "hero.title": "모든 섀도잉은",
         "hero.titleHighlight": "세상과의 대화입니다",
-        "hero.desc": "ECHO는 당신의 개인 에코 코치입니다.",
+        "hero.desc": "좋아하는 영상을 언어 수업으로 바꿔주는 AI 섀도잉 코치. 콘텐츠를 가져와 말하기를 연습하고 즉각적인 피드백을 받으세요.",
         "hero.download": "첫 번째 에코 보내기",
         "hero.learnMore": "더 알아보기",
 
@@ -604,7 +692,35 @@ const translations = {
 
         // Privacy
         "privacy.title": "개인정보 보호정책",
-        "privacy.updated": "최종 업데이트: 2025년 1월"
+        "privacy.updated": "최종 업데이트: 2025년 1월",
+
+        "footer.about": "소개",
+        "footer.developer": "개인 개발자가 운영합니다.",
+
+        // About Page
+        "about.title": "ECHO 소개",
+        "about.who.title": "개발자 소개",
+        "about.who.desc": "ECHO는 개인 개발자가 구축하고 유지 관리하는 독립 프로젝트입니다. 저는 언어 학습과 기술에 열정적이며, 제 자신의 말하기 연습 문제를 해결하기 위해 이 도구를 만들었습니다.",
+        "about.why.title": "개발 이유",
+        "about.why.desc": "학습자가 자신의 자료로 더 효과적으로 영어를 연습할 수 있도록 돕기 위해 이 앱을 만들었습니다. 전통적인 방법은 즉각적인 피드백이 부족한 경우가 많아, 언제나 이용 가능한 \"개인 코치\"를 만들고 싶었습니다.",
+        "about.commitment.title": "나의 약속",
+        "about.commitment.desc": "앱을 적극적으로 유지 관리하고 사용자 피드백에 응답합니다. 개인 개발자이지만 모든 사용자에게 안정적이고 고품질의 경험을 제공하기 위해 최선을 다하고 있습니다.",
+        "about.contact.title": "연락하기",
+        "about.contact.desc": "질문이나 제안이 있거나 인사를 전하고 싶다면 언제든지 연락해 주세요.",
+
+        // Refund Page
+        "refund.title": "환불 정책",
+        "refund.updated": "최종 업데이트: 2025년 1월",
+        "refund.guarantee.title": "7일 환불 보장",
+        "refund.guarantee.desc": "모든 PRO 구독에 대해 7일 환불 보장을 제공합니다. 구매에 만족하지 않으시면 구매일로부터 7일 이내에 전액 환불을 요청하실 수 있습니다.",
+        "refund.how.title": "환불 요청 방법",
+        "refund.how.desc": "환불을 요청하려면 구매 세부 정보(계정 이메일)와 함께 <a href=\"mailto:support@adrian-m.top\">support@adrian-m.top</a>으로 이메일을 보내주세요. 24-48시간 이내에 요청을 처리해 드립니다.",
+        "refund.content.title": "콘텐츠 정책 면책 조항",
+        "refund.content.desc": "<strong>ECHO는 영화, TV 프로그램 또는 저작권이 있는 미디어 콘텐츠를 제공하거나 배포하지 않습니다.</strong> 사용자는 학습 목적으로 합법적으로 획득한 자신의 자료를 사용해야 합니다. 이 앱은 자신의 콘텐츠를 사용하여 언어를 연습하기 위한 도구입니다.",
+        "refund.cancel.title": "구독 취소",
+        "refund.cancel.desc": "앱 설정을 통해 또는 당사에 연락하여 언제든지 구독을 취소할 수 있습니다. PRO 액세스 권한은 현재 청구 기간이 끝날 때까지 유지됩니다.",
+        "refund.contact.title": "문의하기",
+        "refund.contact.desc": "환불 정책에 대해 질문이 있으시면 다음으로 문의해 주세요:"
     }
 };
 
