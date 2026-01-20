@@ -747,7 +747,7 @@ function setLanguage(lang) {
     localStorage.setItem('echoLang', lang);
     applyTranslations(lang);
     updateLangDisplay(lang);
-    updateHeroImage(lang);
+    updateAppImages(lang);
     closeLangMenu();
 
     // Dispatch event for pricing.js to update prices based on new language
@@ -769,25 +769,67 @@ function applyTranslations(lang) {
     document.documentElement.lang = lang;
 }
 
-// Update hero image based on language
-function updateHeroImage(lang) {
-    const heroImage = document.getElementById('hero-image');
-    if (!heroImage) return;
-
-    const imageMap = {
-        en: 'assets/images/ee.jpg',
-        zh: 'assets/images/cc.jpg',
-        ja: 'assets/images/jj.jpg',
-        ko: 'assets/images/kk.jpg'
+// Update all app images based on language
+function updateAppImages(lang) {
+    const prefixMap = {
+        en: 'EE',
+        zh: 'CC',
+        ja: 'JJ',
+        ko: 'KK'
     };
 
-    // Preload images to prevent flickering
-    const newSrc = imageMap[lang] || imageMap.en;
-    const img = new Image();
-    img.onload = () => {
-        heroImage.src = newSrc;
-    };
-    img.src = newSrc;
+    const prefix = prefixMap[lang] || 'EE';
+
+    // Image definitions: { id: 'element-id', path: (prefix) => `path/to/${prefix}image.jpg` }
+    const images = [
+        {
+            id: 'hero-image',
+            path: (p) => `assets/images/show/home/${p}.jpg`
+        },
+        {
+            id: 'img-immersive',
+            path: (p) => `assets/images/show/chenjin/${p}chenjin.jpg`
+        },
+        {
+            id: 'img-landscape',
+            path: (p) => `assets/images/show/hengping/${p}hengping.jpg`
+        },
+        {
+            id: 'img-analysis',
+            path: (p) => `assets/images/show/pfbaogao/${p}pfbaogao.jpg`
+        },
+        {
+            id: 'img-scoring',
+            path: (p) => `assets/images/show/pingfen/${p}pingfen.jpg`
+        },
+        {
+            id: 'img-report',
+            path: (p) => {
+                // Special case for Korean report image typo if needed, assuming consistent naming for now but handling potential case sensitivity
+                // Based on file listing: Kkreport.jpg
+                if (p === 'KK') return `assets/images/show/report/Kkreport.jpg`;
+                return `assets/images/show/report/${p}report.jpg`;
+            }
+        },
+        {
+            id: 'img-loop',
+            path: (p) => `assets/images/show/xunhaun/${p}xunhuan.jpg`
+        }
+    ];
+
+    images.forEach(imgDef => {
+        const el = document.getElementById(imgDef.id);
+        if (!el) return;
+
+        const newSrc = imgDef.path(prefix);
+
+        // Preload to prevent flickering
+        const img = new Image();
+        img.onload = () => {
+            el.src = newSrc;
+        };
+        img.src = newSrc;
+    });
 }
 
 // Update language display in switcher
@@ -827,5 +869,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const lang = getCurrentLanguage();
     applyTranslations(lang);
     updateLangDisplay(lang);
-    updateHeroImage(lang);
+    updateAppImages(lang);
 });
