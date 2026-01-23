@@ -119,13 +119,20 @@
             }
 
             try {
-                // 初始化 Paddle
+                // 根据环境设置 token
+                const sandboxToken = 'test_51899804c0b7ff1e55014f58640';
+                const productionToken = 'live_e5dc4d0697eb117e5dad24e0cd2';
+                
+                // 设置环境
                 if (environment === 'sandbox') {
                     Paddle.Environment.set('sandbox');
                 }
                 
+                // 使用对应环境的 token
+                const token = environment === 'sandbox' ? sandboxToken : productionToken;
+                
                 Paddle.Initialize({
-                    token: clientToken || 'test_51899804c0b7ff1e55014f58640', // Sandbox token
+                    token: clientToken || token,
                     eventCallback: function(event) {
                         console.log('Paddle event:', event);
                         
