@@ -386,10 +386,10 @@
                     locale: navigator.language
                 };
 
-                // 如果有邮箱，预填充以跳过输入步骤
-                if (email) {
-                    checkoutSettings.customerEmail = email;
-                }
+                // 暂时移除前端邮箱填充，防止报错
+                // if (email) {
+                //    checkoutSettings.customerEmail = email;
+                // }
 
                 Paddle.Checkout.open({
                     transactionId: transactionId,
