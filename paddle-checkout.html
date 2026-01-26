@@ -24,16 +24,6 @@
             padding: 24px;
             overflow: hidden;
         }
-
-        /* 尝试隐藏 Paddle 的 loading spinner (不影响支付表单) */
-        .paddle-loader,
-        [class*="Spinner"],
-        [class*="spinner"],
-        [class*="Loader"][class*="paddle"],
-        [data-testid*="spinner"],
-        [data-testid*="loading"] {
-            opacity: 0 !important;
-        }
         
         /* 背景动画 */
         .bg-gradient {
@@ -277,7 +267,7 @@
 <body>
     <div class="bg-gradient"></div>
     
-    <div class="container">
+    <div class="container" style="justify-content: flex-start; padding-top: 80px;">
         <div class="logo-wrapper">
             <img src="assets/images/logo.png" alt="ECHO Logo" class="logo-img">
         </div>
@@ -285,15 +275,8 @@
         <h1 class="title">ECHO PRO</h1>
         <p class="subtitle">Premium Subscription</p>
         
-        <div class="card">
-            <!-- Loading State - 双层圆环 loading -->
-            <div class="loading" id="loading">
-                <div class="spinner-container">
-                    <div class="spinner"></div>
-                    <div class="spinner-inner"></div>
-                </div>
-            </div>
-            
+        <!-- Card 只保留错误和成功状态，loading 使用 Paddle 自带的 -->
+        <div class="card" style="display: none;" id="statusCard">
             <!-- Error State -->
             <div class="error" id="error">
                 <div class="error-icon">⚠️</div>
@@ -417,7 +400,7 @@
         }
 
         function showError(message) {
-            document.getElementById('loading').style.display = 'none';
+            document.getElementById('statusCard').style.display = 'block';
             document.getElementById('success').style.display = 'none';
             const errorEl = document.getElementById('error');
             document.getElementById('errorMessage').textContent = message;
@@ -425,7 +408,7 @@
         }
 
         function showSuccess() {
-            document.getElementById('loading').style.display = 'none';
+            document.getElementById('statusCard').style.display = 'block';
             document.getElementById('error').style.display = 'none';
             document.getElementById('success').style.display = 'block';
         }
