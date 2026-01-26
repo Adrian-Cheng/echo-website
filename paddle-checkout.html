@@ -24,6 +24,16 @@
             padding: 24px;
             overflow: hidden;
         }
+
+        /* 尝试隐藏 Paddle 的 loading spinner (不影响支付表单) */
+        .paddle-loader,
+        [class*="Spinner"],
+        [class*="spinner"],
+        [class*="Loader"][class*="paddle"],
+        [data-testid*="spinner"],
+        [data-testid*="loading"] {
+            opacity: 0 !important;
+        }
         
         /* 背景动画 */
         .bg-gradient {
