@@ -1,8 +1,4 @@
-// Supabase 配置 (使用 anon key，安全地暴露在前端)
-const SUPABASE_URL = 'https://veiwysofwfwxnbkpgckq.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlaXd5c29md2Z3eG5ia3BnY2txIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNDQyMDEsImV4cCI6MjA4MjkyMDIwMX0.oZYT44zNe3EHqkUlIHppq92I4xUYvWgaXCnKGU3xUQ0';
-
-// 默认价格（备用）
+// 默认价格
 const defaultPrices = {
     cny: { monthly: 18, quarterly: 48, yearly: 98, lifetime: 198 },
     usd: { monthly: 4.99, quarterly: 12.99, yearly: 39.99, lifetime: 59.99 },
@@ -27,41 +23,6 @@ function getCurrencyByLang(lang) {
         'ko': 'krw'
     };
     return currencyMap[lang] || 'usd';
-}
-
-// 从 Supabase 获取价格
-async function fetchPricesFromSupabase() {
-    try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/app_settings?select=key,value`, {
-            headers: {
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error('Failed to fetch prices');
-        }
-
-        const data = await response.json();
-        const prices = { cny: {}, usd: {}, jpy: {}, krw: {} };
-
-        data.forEach(item => {
-            // 解析价格键值，如 pro_monthly_price_cny
-            const match = item.key.match(/^pro_(\w+)_price_(\w+)$/);
-            if (match) {
-                const [, plan, currency] = match;
-                if (prices[currency]) {
-                    prices[currency][plan] = parseFloat(item.value);
-                }
-            }
-        });
-
-        return prices;
-    } catch (error) {
-        console.error('Failed to fetch prices from Supabase:', error);
-        return null;
-    }
 }
 
 // 格式化价格金额（不含符号）
@@ -139,16 +100,13 @@ function updatePricingPagePrices(prices, currency) {
 }
 
 // 初始化价格加载
-async function initializePricing() {
+function initializePricing() {
     // 获取当前语言
     const currentLang = localStorage.getItem('echoLang') || 'en';
     const currency = getCurrencyByLang(currentLang);
 
-    // 从 Supabase 获取价格
-    const prices = await fetchPricesFromSupabase();
-
-    // 使用获取的价格或默认价格
-    const finalPrices = prices || defaultPrices;
+    // 使用默认价格
+    const finalPrices = defaultPrices;
 
     // 更新页面价格
     updatePricesOnPage(finalPrices, currency);
@@ -165,7 +123,6 @@ document.addEventListener('DOMContentLoaded', initializePricing);
 
 // 导出供其他脚本使用
 window.EchoPricing = {
-    fetchPrices: fetchPricesFromSupabase,
     updatePrices: updatePricesOnPage,
     getCurrency: getCurrencyByLang
 };
