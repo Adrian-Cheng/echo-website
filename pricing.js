@@ -1,9 +1,9 @@
 // 默认价格
 const defaultPrices = {
-    cny: { monthly: 18, quarterly: 48, yearly: 98, lifetime: 198 },
-    usd: { monthly: 4.99, quarterly: 12.99, yearly: 39.99, lifetime: 59.99 },
-    jpy: { monthly: 750, quarterly: 1950, yearly: 6000, lifetime: 9000 },
-    krw: { monthly: 6900, quarterly: 17900, yearly: 55000, lifetime: 85000 }
+    cny: { monthly: 18.00, quarterly: 48.00, yearly: 128.00, lifetime: 198 },
+    usd: { monthly: 2.99, quarterly: 7.99, yearly: 19.99, lifetime: 59.99 },
+    jpy: { monthly: 400, quarterly: 1080, yearly: 2800, lifetime: 9000 },
+    krw: { monthly: 3900, quarterly: 10900, yearly: 27900, lifetime: 85000 }
 };
 
 // 货币符号映射
